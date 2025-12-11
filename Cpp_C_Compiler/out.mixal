@@ -1,0 +1,29 @@
+        ORIG   1000
+TMP     CON     0
+TEMP1   CON     0
+ONE     CON     1
+ZERO    CON     0
+X	CON	0
+I	CON	0
+J	CON	0
+K	CON	0
+ADD2	LDA X
+	LDA X
+	STA TEMP1
+	LDA Y
+	ADD TEMP1
+	JMP J2
+MAIN	LDA I
+	LDA 2
+	STA K
+	LDA 2
+	STA J
+	LDA J
+	LDA K
+	JSJ ADD2
+J2	NOP
+	STA I
+	LDA I
+	JMP RET
+RET     HLT
+        END MAIN
